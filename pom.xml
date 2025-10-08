@@ -1,0 +1,170 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Basic project information -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>demo-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name></name>
+    <!-- Empty element: <name> is empty -->
+
+    <!-- Properties (Redundant configurations) -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <properties>
+        <encoding>UTF-8</encoding>
+    </properties>
+    <!-- Redundant configuration: Multiple <properties> elements -->
+
+    <!-- Repositories -->
+    <repositories>
+        <repository>
+            <id>deprecated-repo</id>
+            <url>http://repo1.maven.org/maven2</url>
+            <!-- Tight coupling to deprecated repository -->
+        </repository>
+        <repository>
+            <id>unknown-repo</id>
+            <url>http://unknownrepo.com/maven2</url>
+            <!-- Dependency fetched from unknown third-party repository -->
+        </repository>
+    </repositories>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Unordered dependencies -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+            <!-- Pinned dependency version -->
+            <!-- Hardcoded version -->
+        </dependency>
+        <!-- Duplicate dependencies of junit -->
+        <!-- Repeat this block multiple times to exceed the threshold -->
+        <!-- I will add 21 junit dependencies to exceed the threshold -->
+        <!-- Dependency 1 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit1</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!-- Dependency 2 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit2</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!-- ... add dependencies up to Dependency 21 ... -->
+        <!-- For brevity, here's an example with several dependencies -->
+        <!-- Dependency 3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8</version>
+        </dependency>
+        <!-- Dependency 4 -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>example-lib1</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- Continue adding unique dependencies -->
+        <!-- Dependency 5 -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>example-lib2</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- Dependency 6 -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>example-lib3</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- ... Continue until Dependency 21 ... -->
+        <!-- Dependency with missing information -->
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
+            <version></version>
+            <!-- Missing versions and empty elements -->
+        </dependency>
+        <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.3</version>
+    </dependency>
+    <!-- Another vulnerable dependency -->
+    <dependency>
+        <groupId>struts</groupId>
+        <artifactId>struts</artifactId>
+        <version>1.2.8</version>
+    </dependency>
+    </dependencies>
+
+    <!-- Build section -->
+    <build>
+        <plugins>
+            <!-- Duplicate plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <!-- Hardcoded version -->
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <!-- Duplicate plugin configuration -->
+                <!-- Hardcoded version -->
+            </plugin>
+
+            <!-- Plugin with hardcoded user/group permissions -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.12</version>
+                <!-- Hardcoded version -->
+                <configuration>
+                    <user>root</user>
+                    <!-- Hardcoded user -->
+                    <group>admin</group>
+                    <!-- Hardcoded group -->
+                </configuration>
+            </plugin>
+
+            <!-- Plugin with hardcoded heuristics -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <!-- Hardcoded version -->
+                <configuration>
+                    <retryCount>5</retryCount>
+                    <!-- Hardcoded heuristic -->
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <properties>
+            <apiKey>12345-ABCDE</apiKey>
+            <password>secretPassword</password>
+            <!-- Sensitive information: hardcoded API key and password -->
+        </properties>
+
+        <directory>/usr/local/build</directory>
+        <!-- Absolute path: using an absolute path in the <directory> element -->
+    </build>
+
+    <!-- Additional redundant configurations -->
+    <build>
+        <finalName>demo</finalName>
+    </build>
+    <!-- Redundant configuration: Multiple <build> elements -->
+
+</project>

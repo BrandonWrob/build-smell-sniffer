@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "secure-linter"
+version = "0.1.0"
+description = ""
+authors = ["Yash C <ychandr@ncsu.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+Flask = "^3.0.3"
+lxml = "^5.3.0"
+packaging = "^24.2"
+requests = "^2.32.3"
+semantic-version = "^2.10.0"
+gspread = "^6.2.0"
+google-auth = "^2.38.0"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
