@@ -1,4 +1,4 @@
-# Secure Linter
+# Secure Linter ("Sniffer")
 
 **Sniffer** is a lightweight, Flask-powered static analysis tool designed to detect build-script “code smells”, recurring patterns that may hinder maintainability, security, or reproducibility.
 It currently supports CMake, Gradle, GNU Make, and Maven, enabling cross-build-system analysis within a unified framework.
