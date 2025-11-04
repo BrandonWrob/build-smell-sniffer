@@ -22,9 +22,6 @@ You can run Sniffer locally or integrate it into automated workflows for large-s
    - [Publish Image](#publish-image)  
 5. [Project Layout](#project-layout)  
 6. [Adding New Checks](#adding-new-checks)  
-7. [Testing](#testing)  
-8. [Contributing](#contributing)  
-9. [License](#license)
 
 ---
 
@@ -56,7 +53,7 @@ You can run Sniffer locally or integrate it into automated workflows for large-s
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-org/Build-SmellSniffer.git
+git clone https://github.com/Mahzabin-Tamanna/Build-SmellSniffer.git
 cd Build-SmellSniffer/secure-linter
 
 # Install dependencies
@@ -143,25 +140,3 @@ secure-linter/
         
 4.  On next run, your checks are auto-loaded.
 
-## Testing
-Run the included scripts in `tests/` against your sample build scripts:
-```
-poetry run python tests/run_linter_sanity.py
-poetry run python tests/run_linter_empricalanalysis.py
-poetry run python tests/run_linter_userstudy.py
-```
-## Contributing
--   **Fork** this repository.
-    
--   **Create** a branch:
-```
-git checkout -b feat/my-new-check
- ```
- -   **Implement** your parser/check.
-    
--   **Write** tests under `tests/`.
-    
--   **Submit** a pull request.
-
-## License
-This project is released under the Apache 2.0 License
