@@ -1,4 +1,4 @@
-NOTE: This is a forked copy of the original project which can be found at s3c2/build-smell-sniffer
+NOTE: This is a forked copy of the original project which can be found at [s3c2/build-smell-sniffer](https://github.com/s3c2/build-smell-sniffer)
 
 # Secure Linter ("Sniffer")
 
