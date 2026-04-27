@@ -1,3 +1,5 @@
+NOTE: This is a forked copy of the original project which can be found at s3c2/build-smell-sniffer
+
 # Secure Linter ("Sniffer")
 
 **Sniffer** is a lightweight, Flask-powered static analysis tool designed to detect build-script “code smells”, recurring patterns that may hinder maintainability, security, or reproducibility.
